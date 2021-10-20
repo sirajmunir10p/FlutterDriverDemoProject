@@ -19,3 +19,5 @@ samples, guidance on mobile development, and a full API reference.
 After deploying this repository, open VS code or IntelliJ IDEA and type following commands in the Terminal:
 
 flutter drive --target=test_driver/e2e.dart
+
+Note: Changes or Suggestions for improvements are always welcome. :) 
