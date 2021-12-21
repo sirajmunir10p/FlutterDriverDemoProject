@@ -1,6 +1,7 @@
 // Imports the Flutter Driver API.
 import 'package:flutter_driver/flutter_driver.dart';
 import 'package:test/test.dart';
+
 import 'pages/home_page.dart';
 
 void main() {
@@ -38,29 +39,24 @@ void main() {
 
       // Then, verify the counter text is incremented by 2.
       expect(await homePage.getCounterValue(), "2");
-
     });
 
     test('Test the Alert box', () async {
-
       homePage.clickShowMessageButton();
 
-      expect (await homePage.getAlertText(), "Counter value is: 2");
+      expect(await homePage.getAlertText(), "Counter value is: 2");
 
       await Future.delayed(Duration(seconds: 3));
 
       homePage.clickCloseButton();
-
     });
 
     test("Test the Subtract Button", () async {
-
       homePage.clickSubtractButton();
 
       await Future.delayed(Duration(seconds: 3));
 
-      expect (await homePage.getCounterValue(), "2");
-
+      expect(await homePage.getCounterValue(), "1");
     });
   });
 }

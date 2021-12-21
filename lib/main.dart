@@ -50,11 +50,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _incrementCounter() {
     setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
       _counter++;
     });
   }
@@ -105,7 +100,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Text(
               '$_counter',
-              style: Theme.of(context).textTheme.display4,
+              style: Theme.of(context).textTheme.headline1,
               key: ValueKey("counterText"),
             ),
             new Row(
@@ -123,13 +118,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 new RaisedButton(
                   key: Key("subtract"),
-                  onPressed: _decrementCounter,
+                  padding: const EdgeInsets.all(8.0),
                   textColor: Colors.white,
                   color: Colors.red,
-                  padding: const EdgeInsets.all(8.0),
-                  child: new Text(
-                    "Subtract",
-                  ),
+                  onPressed: _decrementCounter,
+                  child: new Text("Subtract"),
                 ),
               ],
             )

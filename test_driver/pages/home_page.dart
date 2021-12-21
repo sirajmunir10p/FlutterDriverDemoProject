@@ -4,9 +4,9 @@ class HomePage {
   final txtCounter = find.byValueKey('counterText');
   final btnIncrement = find.byTooltip('Increment');
   final btnShowMessage = find.byValueKey('alertButton');
-  final btnSubtract = find.byValueKey("subtract");
   final txtAlert = find.byValueKey("alert_text");
   final btnClose = find.byValueKey("close_button");
+  final btnSubtract = find.text("Subtract");
 
   late FlutterDriver _driver;
 
@@ -23,19 +23,19 @@ class HomePage {
   }
 
   Future<void> clickCloseButton() async {
-    return _driver.tap(btnClose);
+    _driver.tap(btnClose);
   }
 
   Future<void> clickBtnPlus() async {
-      return await _driver.tap(btnIncrement);
+      await _driver.tap(btnIncrement);
   }
 
-  Future<void> clickSubtractButton() async {
-    return _driver.tap(btnSubtract);
+  Future<void> clickSubtractButton() async{
+    await _driver.tap(btnSubtract);
   }
 
   Future<void> clickShowMessageButton() async {
-    return _driver.tap(btnShowMessage);
+    _driver.tap(btnShowMessage);
   }
 
   Future<void> waitForElement() async {
